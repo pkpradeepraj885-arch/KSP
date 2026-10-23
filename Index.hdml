@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; }
+        .container { max-width: 400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        h2 { color: #333; }
+        .balance-card { background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .balance-label { color: #2e7d32; font-size: 14px; }
+        .balance-amount { font-size: 24px; font-weight: bold; color: #1b5e20; }
+        button { background-color: #4CAF50; color: white; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dashboard</h2>
+        <div class="balance-card">
+            <div class="balance-label">Daily Earnings Available</div>
+            <div class="balance-amount" id="earnings">₹500.00</div>
+        </div>
+        <button onclick="withdraw()">Withdraw Earnings</button>
+    </div>
+
+    <script>
+        function withdraw() {
+            alert("Withdrawal successful! Your earnings will be transferred to your account.");
+            document.getElementById("earnings").innerText = "₹0.00";
+        }
+    </script>
+</body>
+</html>
